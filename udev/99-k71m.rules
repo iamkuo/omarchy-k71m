@@ -1,0 +1,7 @@
+# iRocks K71M (SONiX SN8F2250) - allow the logged-in user to drive the
+# keyboard's RGB over /dev/hidraw (the 64-byte feature-report mailbox).
+#
+# Install:
+#   sudo install -m 0644 99-k71m.rules /etc/udev/rules.d/99-k71m.rules
+#   sudo udevadm control --reload-rules && sudo udevadm trigger --subsystem-match=hidraw
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="8075", GROUP="wheel", MODE="0660", TAG+="uaccess"

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.ryankuo.k71m",
+  "name": "K71M RGB",
+  "version": "0.1.0",
+  "author": "ryankuo",
+  "license": "MIT",
+  "homepage": "https://github.com/iamkuo/omarchy-k71m",
+  "description": "Control an iRocks K71M (SONiX SN8F2250) keyboard's RGB from the Omarchy bar: static colour plus all 26 lighting effects, spoken over the keyboard's raw HID feature-report protocol.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "K71M RGB",
+    "description": "Static colour and 26 lighting effects for the iRocks K71M keyboard",
+    "category": "System",
+    "aliases": ["k71m", "irocks", "keyboard", "rgb", "lighting", "led", "backlight"],
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
